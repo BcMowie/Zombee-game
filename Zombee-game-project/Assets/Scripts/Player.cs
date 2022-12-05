@@ -80,15 +80,18 @@ public class Player : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Zombee"))
         {
-            Destroy(this);
+            OnDeath?.Invoke();
+            this.enabled = false;
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 
-
+    public Action OnDeath;
 
 }

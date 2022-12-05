@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4578437416153766020
+--- !u!1 &6534129662039668871
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4578437416153766025}
-  - component: {fileID: 4578437416153766026}
-  - component: {fileID: -6252944789674309843}
-  - component: {fileID: -8294014218005136836}
+  - component: {fileID: 6534129662039668987}
+  - component: {fileID: 6534129662039668868}
+  - component: {fileID: 6534129662039668869}
+  - component: {fileID: 6534129662039668870}
+  - component: {fileID: 6534129662039668986}
   m_Layer: 0
-  m_Name: Box
-  m_TagString: Box
+  m_Name: Zombee
+  m_TagString: Zombee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4578437416153766025
+--- !u!4 &6534129662039668987
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4578437416153766020}
+  m_GameObject: {fileID: 6534129662039668871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4578437416153766026
+--- !u!212 &6534129662039668868
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4578437416153766020}
+  m_GameObject: {fileID: 6534129662039668871}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 129bd9f91948140da8a88fbb1d2934c4, type: 3}
+  m_Sprite: {fileID: -804781614, guid: 2f3171873f3b5dd478ee920abb346e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,34 +87,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-6252944789674309843
+--- !u!50 &6534129662039668869
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4578437416153766020}
+  m_GameObject: {fileID: 6534129662039668871}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000000
-  m_LinearDrag: 1000000
-  m_AngularDrag: 1000000
+  m_Mass: 60
+  m_LinearDrag: 2
+  m_AngularDrag: 0.8
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 2
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-8294014218005136836
+--- !u!114 &6534129662039668870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534129662039668871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89160bf9d45f5d048a7bcb3fa96afff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSpeed: 8
+  sprites:
+  - {fileID: -77739466, guid: 2f3171873f3b5dd478ee920abb346e4f, type: 3}
+  - {fileID: -1985765858, guid: 2f3171873f3b5dd478ee920abb346e4f, type: 3}
+  - {fileID: 878662509, guid: 2f3171873f3b5dd478ee920abb346e4f, type: 3}
+  - {fileID: 1887565559, guid: 2f3171873f3b5dd478ee920abb346e4f, type: 3}
+--- !u!61 &6534129662039668986
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4578437416153766020}
+  m_GameObject: {fileID: 6534129662039668871}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -124,12 +143,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.45, y: 2.5}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2, y: 2.2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

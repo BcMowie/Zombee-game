@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameArea: {fileID: 0}
-  boxPrefab: {fileID: 2936163017388524821, guid: 8c7fa5b029a4942df8b94514032d7536, type: 3}
+  boxPrefab: {fileID: 4578437416153766020, guid: 8c7fa5b029a4942df8b94514032d7536, type: 3}

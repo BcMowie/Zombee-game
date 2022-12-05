@@ -10,18 +10,14 @@ public class Percentage : MonoBehaviour
     TextMeshProUGUI textMeshPro;
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         textMeshPro = GetComponent<TextMeshProUGUI>();
     }
 
-    void Start()
-    {
-        
-    }
 
-    
     void Update()
     {
-        textMeshPro.text = $"{player.Percentage().ToString("0.00")}%";
+        textMeshPro.text = $"{player.Percentage():0.00} %";
 
     }
 }
