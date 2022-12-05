@@ -73,9 +73,19 @@ public class Player : MonoBehaviour
         {
             for (int i = (int)gameArea.bounds.min.x; i < gameArea.bounds.max.x; i++)
             {
-                positions.Add(new Vector2(i, j));
-                Debug.DrawLine(new Vector2(i, j), new Vector2(i + 0.05f, j + 0.05f), Color.red, 999);
+                positions.Add(new (i, j));
+                Debug.DrawLine(new (i, j), new Vector2(i + 0.05f, j + 0.05f), Color.red, 999);
             }
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Zombee"))
+        {
+            Destroy(this);
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 
