@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8294014218005136836}
   m_Layer: 0
   m_Name: Zombee
-  m_TagString: Untagged
+  m_TagString: Zombee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

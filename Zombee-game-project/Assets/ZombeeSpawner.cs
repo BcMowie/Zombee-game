@@ -18,7 +18,7 @@ public class ZombeeSpawner : MonoBehaviour
 
     void Spawn()
     {
-        Vector3 pos = new Vector3(0, 0, 0);
+        Vector3 pos = new(0, 0, 0);
         
         GameObject zombee = Instantiate(zombeePref,pos,Quaternion.identity);
         zombee.transform.right = wayPoint.transform.position - transform.position;
@@ -26,8 +26,5 @@ public class ZombeeSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
