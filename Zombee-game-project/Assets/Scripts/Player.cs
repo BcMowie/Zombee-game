@@ -19,18 +19,19 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating(nameof(UpdateWaypoint), 0, 0.3f);
-        InvokeRepeating(nameof(Log), 0, 0.1f);
+        InvokeRepeating(nameof(Percentage), 0, 0.1f);
 
 
         GetInitialPositions();
-
+        
     }
 
-    void Log()
+    public float Percentage()
     {
         if (positions.Find((x) => x == new Vector2((int)transform.position.x, (int)transform.position.y)) != null)
             positions.Remove(positions.Find((x) => x == new Vector2((int)transform.position.x, (int)transform.position.y)));
-        Debug.Log(100 - (positions.Count / (gameArea.bounds.size.x * gameArea.bounds.size.y)) * 100 + "%");
+        return (100 - (positions.Count / (gameArea.bounds.size.x * gameArea.bounds.size.y)) * 100);
+
     }
 
     void UpdateWaypoint()
